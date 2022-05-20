@@ -1,0 +1,12 @@
+spawn(function()
+    while wait() do
+        if Alive(LocalPlayer) then
+                pcall(function()
+                    Buy("[Lettuce] - $5", 1)
+                    if LocalPlayer.Backpack:FindFirstChild("[Lettuce]") then
+                        LocalPlayer.Character.Humanoid:EquipTool(LocalPlayer.Backpack["[Lettuce]"])
+                    end
+                    wait(0.5)
+                    LocalPlayer.Character["[Lettuce]"]:Activate()
+                end)
+            end
